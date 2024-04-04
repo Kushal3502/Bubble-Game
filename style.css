@@ -48,13 +48,17 @@ h1 {
     gap: 5px;
 }
 
-.elem .value {
-    width: 40px;
-    height: 40px;
+.hit,
+.timer,
+.score {
+    width: 50px;
+    height: 50px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: aliceblue;
+    color: #212121;
 }
 
 .bottom {
@@ -67,7 +71,7 @@ h1 {
     gap: 13px;
 }
 
-.end {
+.message {
     font-size: 30px;
     font-weight: bold;
     color: #212121;
@@ -92,6 +96,10 @@ button {
 
 button:hover {
     background-color: rgb(30, 126, 185);
+}
+
+.start {
+    margin-top: 240px;
 }
 
 .bubble {

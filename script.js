@@ -2,7 +2,7 @@ const bottom = document.querySelector('.bottom')
 const hit = document.querySelector('.hit')
 const timer = document.querySelector('.timer')
 const score = document.querySelector('.score')
-
+const startBtn = document.querySelector('.start')
 
 function makeBubbles() {
     bottom.innerHTML = ''
@@ -23,10 +23,10 @@ function runTimer() {
             timer.innerHTML = timerCount;
         } else {
             bottom.innerHTML = `
-                <div class="end">
-                    <p class="message">Game Over!!!</p>
+                <div class="message">
+                    <p>Game Over!!!</p>
                     <p class ="display-score">Your score is ${currScore}</p>
-                    <button>Play Again</button>
+                    <button class="end">Play Again</button>
                 </div>
             `
             const restartBtn = document.querySelector('button')
@@ -61,6 +61,8 @@ bottom.addEventListener('click', (e) => {
     }
 })
 
-generateHit()
-makeBubbles()
-runTimer()
+startBtn.addEventListener('click', () => {
+    generateHit()
+    makeBubbles()
+    runTimer()
+})
